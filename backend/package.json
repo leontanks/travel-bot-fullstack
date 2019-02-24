@@ -13,5 +13,8 @@
     "express": "^4.16.4",
     "express-pino-logger": "^4.0.0",
     "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }

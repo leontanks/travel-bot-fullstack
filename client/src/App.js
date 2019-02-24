@@ -19,9 +19,7 @@ export default class App extends Component {
 
   state = {
     exercises: [
-      { id: 1, title: 'Japan' },
-      { id: 2, title: 'Germany' },
-      { id: 3, title: 'South Korea' }
+      { id: 1, title: 'Neuschwanstein Castle' },
     ],
     title: ''
   }
@@ -60,7 +58,7 @@ export default class App extends Component {
       {/* <NavBar /> */}
 
       <Typography variant='display1' align='center' gutterBottom>
-        Exercises
+        Locations
       </Typography>
 
       <form onSubmit={this.handleCreate}>
