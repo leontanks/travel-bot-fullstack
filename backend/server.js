@@ -47,7 +47,7 @@ app.post('/api/text/analytics', (req, res) => {
 app.get('/api/test', (req, res) => {
   const name = req.query.name || 'World';
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ greeting: `Hello test` }));
+  res.send(JSON.stringify({ greeting: `Hello test3` }));
 });
 
 const PORT = process.env.PORT || 3001;
