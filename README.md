@@ -1,13 +1,29 @@
-# Development Environment
-1. Setup nodejs(v11.3.0) and npm(6.4.1)
-2. Setup visual studio code
+# React/Redux Express Starter Pack
 
+> Create full stack apps with React/Redux and Express. Run your client and server with a single command
 
-# Start the app, run the following command
+### Version Without Redux
+This version includes Redux
+[Click Here For the Version WITHOUT Redux](https://github.com/bradtraversy/react_express_starter) 
+
+## Quick Start
+
+``` bash
+# Install dependencies for server
+npm install
+
+# Install dependencies for client
+npm run client-install
+
+# Run the client & server with concurrently
+npm run dev
+
+# Run the Express server only
+npm run server
+
+# Run the React client only
+npm run client
+
+# Server runs on http://localhost:5000 and client on http://localhost:3000
 ```
-cd backend && npm i
-cd ..
-cd client && npm i
-cd ..
-npm start
-```
+

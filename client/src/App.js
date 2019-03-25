@@ -1,104 +1,27 @@
 import React, { Component } from 'react'
-import TextAnalysis from './components/TextAnalysis'
+import { Provider } from 'react-redux'
+import logo from './logo.svg'
+import './App.css'
+import store from './store'
+import Customers from './components/Customer/customers'
+import Shoppings from './components/Shopping/shoppings'
 
-import { Paper, 
-         Typography, 
-         TextField, 
-         Button,
-         List, 
-         ListItem, 
-         ListItemText,
-         ListItemSecondaryAction,
-         IconButton
-        } 
-from '@material-ui/core'
+class App extends Component {
 
-import { Delete } from '@material-ui/icons'
-
-export default class App extends Component {
-
-  state = {
-    exercises: [
-      { id: 1, title: 'Neuschwanstein Castle' },
-    ],
-    title: ''
-  }
-
-  handleChange = ({ target: { name, value } }) =>
-    this.setState({
-      [name]: value
-  })
-
-  handleCreate = e => {
-    e.preventDefault()
-    if (this.state.title) {
-      this.setState(({ exercises, title }) => ({
-        exercises: [
-          ...exercises,
-          {
-            title,
-            id: Date.now()
-          }
-        ],
-        title: ''
-      }))
-    }
-  }
-
-  handleDelete = id =>
-    this.setState(({ exercises }) => ({
-      exercises: exercises.filter(ex => ex.id !== id)
-    }))
-
-  render() {
-    const { title, exercises } = this.state
-
+  render () {
     return (
-      <Paper>       
-      {/* <NavBar /> */}
-
-      <Typography variant='display1' align='center' gutterBottom>
-        Locations
-      </Typography>
-
-      <form onSubmit={this.handleCreate}>
-        <TextField
-          name='title'
-          label='Trips'
-          value={title}
-          onChange={this.handleChange}
-          margin='normal'
-        />
-        <Button
-          type='submit'
-          color='primary'
-          variant='contained'
-        >
-          Create
-        </Button>
-      </form>
-
-      
-      <TextAnalysis />
-      
-      <List>
-        {exercises.map(({ id, title }) =>
-          <ListItem key={id}>
-            <ListItemText primary={title} />
-            <ListItemSecondaryAction>
-              <IconButton
-                color='primary'
-                onClick={() => this.handleDelete(id)}
-              >
-              <Delete />                
-              </IconButton>
-            </ListItemSecondaryAction>
-          </ListItem>
-        )}
-      </List>
-      </Paper> 
+      <Provider store={ store }>
+        <div className="App">
+          <header className="App-header">
+            <img src={ logo } className="App-logo" alt="logo"/>
+            <h1 className="App-title">React/Redux Express Starter</h1>
+          </header>
+          <Customers/>
+          <Shoppings />
+        </div>
+      </Provider>
     )
   }
 }
 
-
+export default App

@@ -1,16 +1,21 @@
 {
-  "name": "travel-bot-fullstack",
+  "name": "reactexpress",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Starter kit for creating React/Redux and Express apps",
+  "main": "server.js",
   "scripts": {
-    "start": "concurrently \"cd backend && nodemon server.js\" \"cd client && npm start\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Calvin Low",
+  "license": "MIT",
+  "devDependencies": {},
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.7"
   }
 }
