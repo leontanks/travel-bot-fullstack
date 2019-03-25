@@ -9,6 +9,7 @@ import Shoppings from './components/Shopping/shoppings'
 class App extends Component {
 
   render () {
+    console.log(this.props);
     return (
       <Provider store={ store }>
         <div className="App">

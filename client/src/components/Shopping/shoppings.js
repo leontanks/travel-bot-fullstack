@@ -19,6 +19,7 @@ class Shoppings extends Component {
     }
 
     render() {
+        // console.log(this.props);
         return (
             <div>
                 <h2>Travel</h2>
