@@ -12,7 +12,8 @@ class Customers extends Component {
   }
 
   static defaultProps = {
-    customers: []
+    customers: [],
+    shopping2: []
   }
 
   componentWillMount() {
@@ -21,6 +22,10 @@ class Customers extends Component {
 
   render() {
     // console.log(this.props);
+
+    const shoppings = this.props.shopping2
+    console.log(">>>>>>>> shopping 2", shoppings)
+
     return (
       <div>
         <h2>Customers</h2>
@@ -34,9 +39,13 @@ class Customers extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  customers: state.customers
-})
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {  
+    customers: state.customers,
+    shopping2: state.shoppings
+  }
+}
 
 const dispatchToProps = (dispatch) => ({
    getCustomers: () => dispatch(getCustomers())
