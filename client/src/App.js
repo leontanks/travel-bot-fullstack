@@ -5,6 +5,7 @@ import './App.css'
 import store from './store'
 import Customers from './components/Customer/customers'
 import Shoppings from './components/Shopping/shoppings'
+import MainArea from './components/MainArea'
 
 class App extends Component {
 
@@ -17,8 +18,9 @@ class App extends Component {
             <img src={ logo } className="App-logo" alt="logo"/>
             <h1 className="App-title">React/Redux Express Starter</h1>
           </header>
-          <Customers/>
-          <Shoppings />
+          {/* <Customers/>
+          <Shoppings /> */}
+          <MainArea />
         </div>
       </Provider>
     )
