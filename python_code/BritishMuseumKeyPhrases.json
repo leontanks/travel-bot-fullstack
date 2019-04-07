@@ -377,11 +377,6 @@
             "id": "28",
             "keyPhrases": [
                 "low battery",
-                "一点だけ悪い点があります",
-                "オーディオガイドを借りましたが",
-                "途中で止まったため",
-                "大変素晴らしいコレクションでしたが",
-                "交換してもらい",
                 "bad point",
                 "audio guide",
                 "collections",
@@ -2490,10 +2485,5 @@
             ]
         }
     ],
-    "errors": [
-        {
-            "id": "28",
-            "message": "Warning: The document contains very long words (longer than 64 characters). These words may result in truncated and/or unreliable model predictions."
-        }
-    ]
+    "errors": []
 }
