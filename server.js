@@ -29,15 +29,15 @@ app.get('/api/travels', (req, res) => {
       id: 1,
       country: {
         name: "Germany",
-        place: "Neuschwanstein Caste",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Neuschwanstein_Castle_from_Marienbr%C3%BCcke%2C_2011_May.jpg/240px-Neuschwanstein_Castle_from_Marienbr%C3%BCcke%2C_2011_May.jpg"
+        place: "Neuschwanstein Castle",
+        image: "https://blog.hotelscombined.com/wp-content/uploads/2018/09/Neuschwanstein-1.jpg?x79158"
       }
     },
     {
       id: 2,
       country: {
         name: "United Kingdom",
-        places: "British Museum",
+        place: "British Museum",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/British_Museum_%28aerial%29.jpg/800px-British_Museum_%28aerial%29.jpg"
       }
     }
